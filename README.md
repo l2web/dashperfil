@@ -112,9 +112,15 @@ CREATE POLICY "Allow all for client_reports" ON public.client_reports FOR ALL US
 
 ### 3. Configurar variáveis de ambiente
 
-1. Copie o arquivo `.env.example` para `.env`:
+#### Para Desenvolvimento Local:
+
+1. Crie um arquivo `.env` na raiz do projeto:
    ```bash
-   cp .env.example .env
+   # Windows PowerShell
+   New-Item -Path .env -ItemType File
+   
+   # Linux/Mac
+   touch .env
    ```
 
 2. Preencha as variáveis com suas credenciais do Supabase:
@@ -123,6 +129,14 @@ CREATE POLICY "Allow all for client_reports" ON public.client_reports FOR ALL US
    VITE_SUPABASE_PUBLISHABLE_KEY=sua-anon-key
    VITE_SUPABASE_PROJECT_ID=seu-project-id
    ```
+
+#### Para Produção (Deploy):
+
+⚠️ **IMPORTANTE**: O arquivo `.env` no GitHub **NÃO funciona em produção**!
+
+Para deploy em produção (Vercel, Netlify, etc.), você precisa configurar as variáveis de ambiente na plataforma de hospedagem.
+
+📖 **Veja o guia completo**: [`GUIA_DEPLOY_PRODUCAO.md`](./GUIA_DEPLOY_PRODUCAO.md)
 
 ## 🏃 Executando o projeto
 
