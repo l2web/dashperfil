@@ -8,6 +8,7 @@ import ChipsPage from "./pages/ChipsPage";
 import OpenAIPage from "./pages/OpenAIPage";
 import ClientsPage from "./pages/ClientsPage";
 import ReportsPage from "./pages/ReportsPage";
+import TestConnection from "./pages/TestConnection";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/openai" element={<OpenAIPage />} />
           <Route path="/clientes" element={<ClientsPage />} />
           <Route path="/relatorios" element={<ReportsPage />} />
+          <Route path="/test-connection" element={<TestConnection />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
